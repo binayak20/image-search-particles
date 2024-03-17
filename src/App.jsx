@@ -151,6 +151,7 @@ import { Route, Routes } from 'react-router-dom';
 import PageNotFound from './pages/errors/pageNotFound';
 import ImageSearch from './pages/ImageSearch';
 import Particles from './pages/Particles';
+import NewParticlesAnimation from './pages/NewParticlesAnimation';
 
 function App() {
 	return (
@@ -158,6 +159,11 @@ function App() {
 			<Route path='/'>
 				<Route index path='/' element={<ImageSearch />} />
 				<Route index path='/particles' element={<Particles />} />
+				<Route
+					index
+					path='/new-particles'
+					element={<NewParticlesAnimation />}
+				/>
 			</Route>
 
 			<Route path='*' element={<PageNotFound />} />

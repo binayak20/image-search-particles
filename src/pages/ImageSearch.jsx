@@ -92,9 +92,9 @@ function ImageSearch() {
 		setImageNames(names);
 	}, [images]); // Empty dependency array means this effect runs once on mount
 
-	const goParticlePage = () => {
+	const goParticlePage = (url) => {
 		// Open the /particles route in a new tab
-		window.open('/particles', '_blank');
+		window.open(url, '_blank');
 	};
 
 	console.log('imageNames:', imageNames);
@@ -120,8 +120,17 @@ function ImageSearch() {
 				<div onClick={() => handleSelection('shoes')}>Shoes</div>
 			</div>
 			<div className='search-section'>
-				<Button onClick={goParticlePage} className='me-2 mb-2'>
+				<Button
+					onClick={() => goParticlePage('/particles')}
+					className='me-2 mb-2'
+				>
 					Go particle
+				</Button>
+				<Button
+					onClick={() => goParticlePage('/new-particles')}
+					className='me-2 mb-2'
+				>
+					New Animation particle
 				</Button>
 			</div>
 			<div className='search-section'>

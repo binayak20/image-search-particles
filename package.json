@@ -17,6 +17,7 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
+    "simplex-noise": "^4.0.1",
     "tsparticles": "^3.3.0"
   },
   "devDependencies": {
